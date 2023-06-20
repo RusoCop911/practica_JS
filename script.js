@@ -12,11 +12,11 @@ let divisa = [
 let respuestaContinente = ''
 
 do {
-    respuestaContinente = prompt('De qué continente desea buscar divisas? \n 1) América \n 2) Europa \n 3) Asia \n Para salir tipear "salir" o click en "Cancel"').toLowerCase();
+    respuestaContinente = prompt('De qué continente desea buscar divisas? \n 1) América \n 2) Europa \n 3) Asia \n Para salir tipear "salir" o click en "Cancel"').toLowerCase()
     const continenteElegido = divisa.find(divisa => divisa.continente === respuestaContinente)
     
     if (continenteElegido) {
-        if (continenteElegido.continente === 'america' || 'américa' || '1') {
+        if (continenteElegido.continente === 'america' || continenteElegido.continente === 'américa' || continenteElegido.continente === '1') {
             const seleccionDivisa = prompt('Selecciona la divisa que deseas convertir a pesos argentinos: \n 1) Dólares \n 2) Reales \n Click en "Cancel" para volver').toLowerCase()
             if (seleccionDivisa === '1' || seleccionDivisa === 'dólares' || seleccionDivisa === 'dolares') {
                 validarDatosDolares()
@@ -81,7 +81,7 @@ function cambioPesos() {
     } else if (pesos === 0) {
         validarDatosDolares()
     } else {
-        alert('La cantidad en ' + (continenteElegido.nombre) + 'blue seria de ' + (pesos / continenteElegido.valorBlue))
+        alert('La cantidad en ' + continenteElegido.nombre + 'blue seria de ' + (pesos / continenteElegido.valorBlue))
     }
 }
 
