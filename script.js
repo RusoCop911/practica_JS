@@ -10,6 +10,7 @@ let divisa = [
 
 let respuestaContinente = ''
 
+let inicioCalculadora = seleccionContinente()
 
 
 function seleccionContinente() {
@@ -33,9 +34,9 @@ function seleccionContinente() {
         }
     } else {
         alert('Continente no encontrado. Por favor, ingrese un continente válido.')
+        seleccionContinente()
     }
 }
-
 
 
 // do {
